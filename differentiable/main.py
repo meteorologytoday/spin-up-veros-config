@@ -1,10 +1,5 @@
 # Couple JCM and Veros using JAX-ESM (JEM).
 
-# Must be imported before h5py (pulled in by veros/jem): the pip wheels of
-# h5py and netCDF4 each bundle their own HDF5, and if h5py's loads first,
-# every netCDF4 write fails with "RuntimeError: NetCDF: HDF error".
-import netCDF4  # noqa: F401
-
 import json
 import sys
 from pathlib import Path
